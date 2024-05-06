@@ -5,25 +5,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sugar Cafe Order Form</title>
     <style>
-        /* Add all your CSS here */
-        body, html {
-            font-family: Arial, sans-serif;
+       body, html {
+            height: 100%; /* Ensure the full height for perfect vertical centering */
             margin: 0;
             padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center; /* Center content vertically in the viewport */
             background-color: #f4f4f4;
         }
-        .form-item {
-            margin: 15px;
+
+        header, footer {
+            width: 100%;
+            background-color: #eb9494;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            box-sizing: border-box; /* Includes padding in width calculation */
         }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%; /* Adjust this to set the maximum width of the main content */
+        }
+
+        section {
+            width: 80%; /* Adjust according to preference for max width of the form */
+            max-width: 600px; /* Ensures the section does not become too wide on larger screens */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .form-item {
+            width: 100%;
+            text-align: center;
+            margin: 10px;
+        }
+
+        input[type="number"], button {
+            margin: 5px 0;
+            padding: 8px 10px;
+        }
+
         button {
-            padding: 10px 15px;
             background-color: #4CAF50;
             color: white;
             border: none;
             cursor: pointer;
+            margin-top: 20px;
         }
+
         button:hover {
             background-color: #45a049;
+        }
+
+        .error {
+            color: red;
+            margin-top: 10px;
         }
     </style>
 </head>
@@ -68,6 +110,11 @@
         </div>
         <button type="submit">Submit Order</button>
     </form>
+</section>
+</main>
+<footer>
+    <p>Thank you for visiting Sugar Cafe!</p>
+</footer>
 
     <script>
         // Example of inline JavaScript for client-side logic
