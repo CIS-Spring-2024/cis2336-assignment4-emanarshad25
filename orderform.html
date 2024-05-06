@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafe Order Form</title>
+    <style>
+        body, html {
+            height: 100%; /* Ensure the full height for perfect vertical centering */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center; /* Center content vertically in the viewport */
+            background-color: #f4f4f4;
+        }
+
+        header, footer {
+            width: 100%;
+            background-color: #eb9494;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            box-sizing: border-box; /* Includes padding in width calculation */
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%; /* Adjust this to set the maximum width of the main content */
+        }
+
+        section {
+            width: 80%; /* Adjust according to preference for max width of the form */
+            max-width: 600px; /* Ensures the section does not become too wide on larger screens */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .form-item {
+            width: 100%;
+            text-align: center;
+            margin: 10px;
+        }
+
+        input[type="number"], button {
+            margin: 5px 0;
+            padding: 8px 10px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .error {
+            color: red;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Sugar Cafe!</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Order Here</h2>
+            <form id="orderForm">
+                <div class="form-item">
+                    <label for="espresso">Espresso:</label>
+                    <input type="number" id="espresso" name="espresso" min="0" max="10" value="0">
+                </div>
+                <div class="form-item">
+                    <label for="americano">Americano:</label>
+                    <input type="number" id="americano" name="americano" min="0" max="10" value="0">
+                </div>
+                <div class="form-item">
+                    <label for="latte">Latte:  </label>
+                    <input type="number" id="latte" name="latte" min="0" max="10" value="0">
+                </div>
+                <div class="form-item">
+                    <label for="green tea">Green Tea:</label>
+                    <input type="number" id="green tea" name="green tea" min="0" max="10" value="0">
+                </div>
+                <div class="form-item">
+                <label for="black tea">Black Tea:</label>
+                <input type="number" id="black tea" name="black tea" min="0" max="10" value="0">
+                </div>
+                <div class="form-item">
+                <label for="croissant">Croissant:</label>
+                <input type="number" id="croissant" name="croissant" min="0" max="10" value="0">
+                </div>
+                <div class="form-item">
+                <label for="muffin">Muffin:  </label>
+                <input type="number" id="muffin" name="muffin" min="0" max="10" value="0">
+                </div>
+                <div class="form-item">
+                <label for="chicken sandwich">Chicken Sandwich:</label>
+                <input type="number" id="chicken sandwich" name="chicken sandwich" min="0" max="10" value="0">
+                </div>
+                <div class="form-item">
+                <label for="grilled cheese">Grilled Cheese:</label>
+                <input type="number" id="grilled cheese" name="grilled cheese" min="0" max="10" value="0">
+                </div>
+                <button type="submit">Submit Order</button>
+                <div id="feedback" class="error"></div>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>Thank you for visiting Sugar Cafe!</p>
+    </footer>
+</body>
+</html>
