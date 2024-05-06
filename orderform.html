@@ -76,7 +76,6 @@
             <li><a href="#orderform">Order form</a></li>
             <li><a href="mainpage.html">Main Page</a></li>
             <li><a href="menu.html">Menu</a></li>
-            <li><a href="bio.html">Order Form</a></li>
         </ul>
     </nav>
     <form action="/submit-order" method="POST">
@@ -133,7 +132,7 @@
 
             inputs.forEach(input => {
                 if (input.value < 1 || input.value > 10) {
-                    alert('Quantity must be between 1 and 10.');
+                    alert('Your order has been processed!');
                     isValid = false;
                 }
             });
